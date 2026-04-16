@@ -188,7 +188,10 @@ classdef ECG12
                         [obj.hz, obj.I, obj.II, obj.III, obj.avR, obj.avF, obj.avL, ...
                             obj.V1, obj.V2, obj.V3, obj.V4, obj.V5, obj.V6] = load_elixml(filename);
 
-					
+                    case 'biocare_zekg'
+                        [obj.hz, obj.I, obj.II, obj.III, obj.avR, obj.avF, obj.avL, ...
+                        obj.V1, obj.V2, obj.V3, obj.V4, obj.V5, obj.V6] = load_zekg(filename);
+                        
                     otherwise
                         error('unknown format %s', format);
                 end
